@@ -2,7 +2,8 @@
 // Returns per-type availability using capacity (total_units - used)
 
 export async function onRequestGet(ctx) {
-  const { DB, env } = ctx;
+  const { env } = ctx;
+  const DB = env.DB;         // <- D1 binding is on ctx.env
   const url = new URL(ctx.request.url);
   const start = url.searchParams.get("start");
   const end = url.searchParams.get("end");

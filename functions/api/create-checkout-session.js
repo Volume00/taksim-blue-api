@@ -5,7 +5,8 @@
 import Stripe from "stripe";
 
 export async function onRequestPost(ctx) {
-  const { DB, env } = ctx;
+  const { env } = ctx;
+  const DB = env.DB;         // <- D1 binding is on ctx.env
   const origin = env.CORS_ORIGIN || "*";
   const body = await ctx.request.json().catch(() => ({}));
   const { room_slug, start, end, guests, guest_name, guest_email } = body;

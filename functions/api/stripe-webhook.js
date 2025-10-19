@@ -4,7 +4,8 @@
 import Stripe from "stripe";
 
 export async function onRequestPost(ctx) {
-  const { DB, env } = ctx;
+  const { env } = ctx;
+  const DB = env.DB;         // <- D1 binding is on ctx.env
   const sig = ctx.request.headers.get("stripe-signature");
   const rawBody = await ctx.request.text();
 
