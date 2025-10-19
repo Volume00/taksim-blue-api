@@ -1,0 +1,11 @@
+{
+  "name": "taksim-blue-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo \"building functions for Cloudflare Pages\""
+  },
+  "dependencies": {
+    "stripe": "^16.0.0"
+  }
+}

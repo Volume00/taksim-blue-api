@@ -1,0 +1,10 @@
+taksim-blue-api/
+├─ functions/
+│  ├─ _middleware.js
+│  └─ api/
+│     ├─ availability.js
+│     ├─ create-checkout-session.js
+│     └─ stripe-webhook.js
+├─ schema.sql
+├─ package.json
+└─ README.md
